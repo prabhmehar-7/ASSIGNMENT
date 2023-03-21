@@ -16,9 +16,11 @@ public class OrderTest {
     }
 
     @Test(expected = Exception.class)
+//    @Test -> throws Exception
     public void test1(){
         Order o = new Order(5,"Food",100);
         assertEquals(20,OrderService.getInstance().placeOrder(o));
+//        throw new Exception("") ;
     }
     @Test
     public void test2(){
