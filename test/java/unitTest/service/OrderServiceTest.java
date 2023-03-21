@@ -5,7 +5,7 @@ import unitTest.domain.Order;
 
 import static org.junit.Assert.*;
 
-public class OrderTest {
+public class OrderServiceTest {
     @BeforeClass
     public static void testBeforeClass() throws Exception {
         System.out.println("Before Class");
@@ -16,11 +16,9 @@ public class OrderTest {
     }
 
     @Test(expected = Exception.class)
-//    @Test -> throws Exception
     public void test1(){
         Order o = new Order(5,"Food",100);
         assertEquals(20,OrderService.getInstance().placeOrder(o));
-//        throw new Exception("") ;
     }
     @Test
     public void test2(){
